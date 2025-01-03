@@ -100,10 +100,8 @@
  }
 
 export async function GET() {
-  return Response.json({
-    message:
-      'Uncomment this file and remove this line. You can delete this file when you are finished.',
-  });
+ 
+  
    try {
      await client.sql`BEGIN`;
      await seedUsers();
@@ -118,3 +116,4 @@ export async function GET() {
      return Response.json({ error }, { status: 500 });
    }
 }
+
